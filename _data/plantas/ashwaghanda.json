@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "nombre": "Valeriana",
+  "botanical": "Valeriana officinalis",
+  "categoria": "relajacion",
+  "categoriaNombre": "RelajaciÃ³n",
+  "descripcion": "RaÃ­z seca. Tradicional para el insomnio y la ansiedad.",
+  "descripcionCompleta": "La valeriana es el sedante natural por excelencia. Su raÃ­z contiene compuestos que ayudan a conciliar el sueÃ±o y a reducir la ansiedad sin causar dependencia ni somnolencia diurna. Ideal para personas que se despiertan durante la noche.",
+  "usos": ["Insomnio", "Ansiedad", "EstrÃ©s", "Nerviosismo"],
+  "preparacion": "InfusiÃ³n: 1 cucharadita de raÃ­z por taza, dejar reposar 10-15 minutos tapado. Tomar 30-60 minutos antes de acostarse. Tintura: 30-40 gotas en agua antes de dormir.",
+  "contraindicaciones": "Evitar durante el embarazo y lactancia. No conducir despuÃ©s de tomarla. Puede potenciar el efecto de otros sedantes, alcohol y medicamentos para la ansiedad. No usar mÃ¡s de 2-3 meses seguidos.",
+  "estudios": "Los estudios clÃ­nicos han demostrado que la valeriana mejora la calidad del sueÃ±o y reduce el tiempo necesario para conciliarlo, especialmente en personas con insomnio leve a moderado.",
+  "precio": 12.30,
+  "imagen": "https://images.unsplash.com/photo-1546241072-48010ad2862c?q=80&w=800&auto=format&fit=crop",
+  "icono": "ðŸŒ¿"
+}
