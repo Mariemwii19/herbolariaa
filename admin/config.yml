@@ -10,7 +10,7 @@ collections:
     label: "🌿 Plantas Medicinales"
     folder: "_data/plantas"
     create: true
-    slug: "{{filename}}"
+    slug: "{{slug}}"
     fields:
       - {label: "ID", name: "id", widget: "number", value_type: "int"}
       - {label: "Nombre", name: "nombre", widget: "string"}
@@ -112,4 +112,5 @@ collections:
       - {label: "Precio", name: "precio", widget: "number", value_type: "float"}
       - {label: "Image URL", name: "imagen", widget: "string"}
       - {label: "Icono", name: "icono", widget: "string"}
+
 
