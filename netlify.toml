@@ -1,20 +1,8 @@
 [build]
   publish = "."
-  command = "echo 'Site statique - pas de build nécessaire'"
 
-# Redirection pour l'admin
-[[redirects]]
-  from = "/admin/*"
-  to = "/admin/index.html"
-  status = 200
-
-# Configuration Netlify Identity
-[identity]
-  # Activation de l'authentification
-
-# Headers de sécurité
 [[headers]]
-  for = "/*"
+  for = "/_data/*"
   [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=0, must-revalidate"
