@@ -1,0 +1,114 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "plantas"
+    label: "🌿 Plantas Medicinales"
+    folder: "_data/plantas"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "ID", name: "id", widget: "number", value_type: "int"}
+      - {label: "Nombre", name: "nombre", widget: "string"}
+      - {label: "Nombre botánico", name: "botanical", widget: "string"}
+      - {label: "Categoría", name: "categoria", widget: "select", options: ["adaptogenos", "digestion", "relajacion", "respiratorio"]}
+      - {label: "Nombre de categoría", name: "categoriaNombre", widget: "string"}
+      - {label: "Descripción corta", name: "descripcion", widget: "text"}
+      - {label: "Descripción completa", name: "descripcionCompleta", widget: "markdown"}
+      - {label: "Usos", name: "usos", widget: "list", field: {label: "Uso", name: "uso", widget: "string"}}
+      - {label: "Preparación", name: "preparacion", widget: "markdown"}
+      - {label: "Contraindicaciones", name: "contraindicaciones", widget: "markdown"}
+      - {label: "Estudios", name: "estudios", widget: "markdown"}
+      - {label: "Precio (€)", name: "precio", widget: "number", value_type: "float", min: 0, step: 0.1}
+      - {label: "Image URL", name: "imagen", widget: "string"}
+      - {label: "Icono (emoji)", name: "icono", widget: "string"}
+
+  - name: "infusiones"
+    label: "🍵 Infusiones"
+    folder: "_data/infusiones"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "ID", name: "id", widget: "number"}
+      - {label: "Nombre", name: "nombre", widget: "string"}
+      - {label: "Ingredientes", name: "botanical", widget: "string"}
+      - {label: "Categoría", name: "categoria", widget: "select", options: ["relajantes", "digestivas", "energeticas", "detox", "defensas"]}
+      - {label: "Nombre de categoría", name: "categoriaNombre", widget: "string"}
+      - {label: "Descripción corta", name: "descripcion", widget: "text"}
+      - {label: "Descripción completa", name: "descripcionCompleta", widget: "markdown"}
+      - {label: "Propiedades", name: "usos", widget: "list", field: {label: "Propiedad", name: "uso", widget: "string"}}
+      - {label: "Preparación", name: "preparacion", widget: "markdown"}
+      - {label: "Ingredientes", name: "ingredientes", widget: "markdown"}
+      - {label: "Estudios", name: "estudios", widget: "markdown"}
+      - {label: "Precio", name: "precio", widget: "number", value_type: "float"}
+      - {label: "Image URL", name: "imagen", widget: "string"}
+      - {label: "Icono", name: "icono", widget: "string"}
+
+  - name: "cosmetica"
+    label: "🧴 Cosmética Natural"
+    folder: "_data/cosmetica"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "ID", name: "id", widget: "number"}
+      - {label: "Nombre", name: "nombre", widget: "string"}
+      - {label: "Ingredientes", name: "botanical", widget: "string"}
+      - {label: "Categoría", name: "categoria", widget: "select", options: ["cremas", "jabones", "aceites", "labios", "exfoliantes"]}
+      - {label: "Nombre de categoría", name: "categoriaNombre", widget: "string"}
+      - {label: "Descripción corta", name: "descripcion", widget: "text"}
+      - {label: "Descripción completa", name: "descripcionCompleta", widget: "markdown"}
+      - {label: "Beneficios", name: "usos", widget: "list", field: {label: "Beneficio", name: "uso", widget: "string"}}
+      - {label: "Modo de uso", name: "preparacion", widget: "markdown"}
+      - {label: "Ingredientes", name: "ingredientes", widget: "markdown"}
+      - {label: "Estudios", name: "estudios", widget: "markdown"}
+      - {label: "Precio", name: "precio", widget: "number", value_type: "float"}
+      - {label: "Image URL", name: "imagen", widget: "string"}
+      - {label: "Icono", name: "icono", widget: "string"}
+
+  - name: "perfume"
+    label: "🌸 Perfumes Botánicos"
+    folder: "_data/perfume"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "ID", name: "id", widget: "number"}
+      - {label: "Nombre", name: "nombre", widget: "string"}
+      - {label: "Ingredientes", name: "botanical", widget: "string"}
+      - {label: "Categoría", name: "categoria", widget: "select", options: ["florales", "citricos", "amaderados", "dulces"]}
+      - {label: "Nombre de categoría", name: "categoriaNombre", widget: "string"}
+      - {label: "Descripción corta", name: "descripcion", widget: "text"}
+      - {label: "Descripción completa", name: "descripcionCompleta", widget: "markdown"}
+      - {label: "Notas olfativas", name: "notas", widget: "list", field: {label: "Nota", name: "nota", widget: "string"}}
+      - {label: "Usos", name: "usos", widget: "list", field: {label: "Uso", name: "uso", widget: "string"}}
+      - {label: "Modo de uso", name: "preparacion", widget: "markdown"}
+      - {label: "Ingredientes", name: "ingredientes", widget: "markdown"}
+      - {label: "Estudios", name: "estudios", widget: "markdown"}
+      - {label: "Precio", name: "precio", widget: "number", value_type: "float"}
+      - {label: "Image URL", name: "imagen", widget: "string"}
+      - {label: "Icono", name: "icono", widget: "string"}
+
+  - name: "ropa"
+    label: "👕 Ropa Sostenible"
+    folder: "_data/ropa"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "ID", name: "id", widget: "number"}
+      - {label: "Nombre", name: "nombre", widget: "string"}
+      - {label: "Teñido con", name: "botanical", widget: "string"}
+      - {label: "Categoría", name: "categoria", widget: "select", options: ["camisetas", "pantalones", "vestidos", "complementos"]}
+      - {label: "Nombre de categoría", name: "categoriaNombre", widget: "string"}
+      - {label: "Descripción corta", name: "descripcion", widget: "text"}
+      - {label: "Descripción completa", name: "descripcionCompleta", widget: "markdown"}
+      - {label: "Usos", name: "usos", widget: "list", field: {label: "Uso", name: "uso", widget: "string"}}
+      - {label: "Tallas", name: "tallas", widget: "string", required: false}
+      - {label: "Medidas", name: "medidas", widget: "string", required: false}
+      - {label: "Materiales", name: "materiales", widget: "markdown"}
+      - {label: "Cuidados", name: "cuidados", widget: "markdown"}
+      - {label: "Precio", name: "precio", widget: "number", value_type: "float"}
+      - {label: "Image URL", name: "imagen", widget: "string"}
+      - {label: "Icono", name: "icono", widget: "string"}
