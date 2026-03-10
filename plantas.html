@@ -515,105 +515,44 @@
     <script>
         AOS.init();
 
-        // BASE DE DATOS COMPLETA CON FICHAS DETALLADAS
-        const productos = [
-            { 
-                id: 1, 
-                nombre: "Ashwagandha", 
-                botanical: "Withania somnifera", 
-                categoria: "adaptogenos", 
-                categoriaNombre: "Adaptógeno",
-                descripcion: "Raíz en polvo. Ayuda a reducir el estrés y mejorar la vitalidad.",
-                descripcionCompleta: "La ashwagandha es una de las plantas más importantes de la medicina ayurvédica. Clasificada como adaptógeno, ayuda al cuerpo a manejar el estrés de manera natural. Nuestra ashwagandha proviene de cultivos ecológicos en India, recolectada a mano y secada a baja temperatura para preservar sus propiedades.",
-                usos: ["Estrés y ansiedad", "Insomnio", "Falta de energía", "Memoria y concentración"],
-                preparacion: "Infusión: 1 cucharadita de raíz en polvo en agua caliente, 1-2 veces al día. Tintura: 30-40 gotas, 2-3 veces al día. Leche dorada: mezclar con leche caliente y miel antes de dormir.",
-                contraindicaciones: "Evitar durante el embarazo y lactancia. Consultar con un profesional si se toman medicamentos para la tiroides, diabetes o hipertensión. Puede causar somnolencia, evitar conducir después de tomar dosis altas.",
-                estudios: "Múltiples estudios clínicos han demostrado su eficacia para reducir los niveles de cortisol (la hormona del estrés) hasta en un 30%. También se ha observado mejora en la calidad del sueño y la memoria.",
-                precio: 22.90, 
-                imagen: "https://images.unsplash.com/photo-1615484477774-c1f0c7f6e7d1?q=80&w=800&auto=format&fit=crop", 
-                icono: ""
-            },
-            { 
-                id: 2, 
-                nombre: "Manzanilla", 
-                botanical: "Matricaria chamomilla", 
-                categoria: "digestion", 
-                categoriaNombre: "Digestión",
-                descripcion: "Flores secas. Alivia molestias digestivas y nerviosismo.",
-                descripcionCompleta: "La manzanilla es una de las hierbas más utilizadas en el mundo por sus propiedades digestivas y calmantes. Ideal para después de las comidas, alivia los espasmos estomacales, reduce los gases y ayuda a conciliar el sueño. Flores enteras de cultivo ecológico en España.",
-                usos: ["Espasmos estomacales", "Gases", "Nerviosismo", "Inflamación digestiva"],
-                preparacion: "Infusión: 1 cucharada de flores por taza, dejar reposar 5-7 minutos tapado. Tomar después de las comidas o antes de dormir. También se puede usar en baños relajantes.",
-                contraindicaciones: "Raramente puede causar reacciones alérgicas en personas sensibles a plantas de la familia Asteraceae. Evitar dosis muy altas durante el embarazo.",
-                estudios: "La manzanilla contiene más de 120 componentes químicos, incluyendo flavonoides y terpenoides con propiedades antiinflamatorias y antiespasmódicas.",
-                precio: 8.50, 
-                imagen: "https://images.unsplash.com/photo-1589754887121-73d3a5d7c2cb?q=80&w=800&auto=format&fit=crop", 
-                icono: ""
-            },
-            { 
-                id: 3, 
-                nombre: "Valeriana", 
-                botanical: "Valeriana officinalis", 
-                categoria: "relajacion", 
-                categoriaNombre: "Relajación",
-                descripcion: "Raíz seca. Tradicional para el insomnio y la ansiedad.",
-                descripcionCompleta: "La valeriana es el sedante natural por excelencia. Su raíz contiene compuestos que ayudan a conciliar el sueño y a reducir la ansiedad sin causar dependencia ni somnolencia diurna. Ideal para personas que se despiertan durante la noche.",
-                usos: ["Insomnio", "Ansiedad", "Estrés", "Nerviosismo"],
-                preparacion: "Infusión: 1 cucharadita de raíz por taza, dejar reposar 10-15 minutos tapado. Tomar 30-60 minutos antes de acostarse. Tintura: 30-40 gotas en agua antes de dormir.",
-                contraindicaciones: "Evitar durante el embarazo y lactancia. No conducir después de tomarla. Puede potenciar el efecto de otros sedantes, alcohol y medicamentos para la ansiedad. No usar más de 2-3 meses seguidos.",
-                estudios: "Los estudios clínicos han demostrado que la valeriana mejora la calidad del sueño y reduce el tiempo necesario para conciliarlo, especialmente en personas con insomnio leve a moderado.",
-                precio: 12.30, 
-                imagen: "https://images.unsplash.com/photo-1546241072-48010ad2862c?q=80&w=800&auto=format&fit=crop", 
-                icono: ""
-            },
-            { 
-                id: 4, 
-                nombre: "Jengibre", 
-                botanical: "Zingiber officinale", 
-                categoria: "digestion", 
-                categoriaNombre: "Digestión",
-                descripcion: "Raíz troceada. Antiinflamatorio, alivia náuseas y gripes.",
-                descripcionCompleta: "El jengibre es un potente antiinflamatorio natural y un gran aliado para el sistema digestivo. Tradicionalmente se usa para aliviar náuseas, mareos y malestar estomacal. Raíz deshidratada de Perú.",
-                usos: ["Náuseas", "Mareos", "Digestión lenta", "Gases"],
-                preparacion: "Infusión: 2-3 rodajas de raíz fresca, hervir 10 minutos. Para náuseas, tomar pequeños sorbos. También se puede masticar un trozo pequeño de raíz fresca.",
-                contraindicaciones: "Puede aumentar el riesgo de sangrado si se toma con anticoagulantes. Evitar dosis muy altas durante el embarazo.",
-                estudios: "Múltiples estudios confirman la eficacia del jengibre para las náuseas del embarazo, la quimioterapia y el mareo por movimiento.",
-                precio: 10.90, 
-                imagen: "https://images.unsplash.com/photo-1615485290448-2d8e2f5f6d7a?q=80&w=800&auto=format&fit=crop", 
-                icono: ""
-            },
-            { 
-                id: 5, 
-                nombre: "Tila", 
-                botanical: "Tilia platyphyllos", 
-                categoria: "relajacion", 
-                categoriaNombre: "Relajación",
-                descripcion: "Flores de tilo. Relajante suave para el estrés diario.",
-                descripcionCompleta: "La tila es uno de los remedios más tradicionales para los nervios y la ansiedad leve. Sus flores tienen un efecto calmante suave que ayuda a relajarse sin somnolencia. Flores recolectadas en España.",
-                usos: ["Ansiedad leve", "Tensión nerviosa", "Dolor de cabeza tensional", "Dificultad para relajarse"],
-                preparacion: "Infusión: 1 cucharada de flores por taza, 5-8 minutos tapado. Se puede tomar varias veces al día, especialmente en momentos de tensión.",
-                contraindicaciones: "Generalmente segura. En dosis muy altas podría causar somnolencia. Puede tener un ligero efecto hipotensor.",
-                estudios: "Los flavonoides de la tila tienen efectos ansiolíticos y sedantes suaves.",
-                precio: 9.90, 
-                imagen: "https://images.unsplash.com/photo-1589754887121-73d3a5d7c2cb?q=80&w=800&auto=format&fit=crop", 
-                icono: ""
-            },
-            { 
-                id: 6, 
-                nombre: "Eucalipto", 
-                botanical: "Eucalyptus globulus", 
-                categoria: "respiratorio", 
-                categoriaNombre: "Respiratorio",
-                descripcion: "Hojas para vahos. Descongestionante y balsámico.",
-                descripcionCompleta: "El eucalipto es el gran aliado del sistema respiratorio. Sus hojas contienen eucaliptol, un potente descongestionante y expectorante. Ideal para hacer vahos en caso de resfriados. Hojas de cultivo ecológico.",
-                usos: ["Congestión nasal", "Bronquitis", "Tos productiva", "Sinusitis"],
-                preparacion: "Vahos: Hervir hojas en agua, retirar del fuego e inhalar el vapor con una toalla sobre la cabeza, 5-10 minutos. Infusión: 1 cucharadita de hojas por taza (uso interno limitado).",
-                contraindicaciones: "No tomar el aceite esencial internamente sin supervisión profesional. Las hojas en infusión pueden ser irritantes en dosis altas.",
-                estudios: "El eucaliptol (1,8-cineol) tiene efectos mucolíticos, antiinflamatorios y antimicrobianos demostrados en múltiples estudios clínicos.",
-                precio: 7.95, 
-                imagen: "https://images.unsplash.com/photo-1615485290448-2d8e2f5f6d7a?q=80&w=800&auto=format&fit=crop", 
-                icono: ""
-            }
-        ];
+        // Au lieu d'avoir les données en dur, on les charge depuis les fichiers JSON
+let productos = [];
+
+async function cargarProductos() {
+  try {
+    // Liste des fichiers JSON dans _data/plantas/
+    const archivos = [
+      'ashwagandha.json',
+      'manzanilla.json', 
+      'valeriana.json',
+      'jengibre.json',
+      'tila.json',
+      'eucalipto.json'
+      // Ajoute ici tous tes fichiers
+    ];
+    
+    for (const archivo of archivos) {
+      const respuesta = await fetch(`/_data/plantas/${archivo}`);
+      const data = await respuesta.json();
+      productos.push(data);
+    }
+    
+    // Une fois tous les produits chargés, on filtre et affiche
+    filteredProducts = [...productos];
+    renderProducts();
+    resultsCount.textContent = `Mostrando ${filteredProducts.length} productos`;
+    
+  } catch (error) {
+    console.error('Erreur chargement produits:', error);
+    // Fallback : utilise les données en dur si le chargement échoue
+    productos = [...]; // tes données en dur en backup
+    filteredProducts = [...productos];
+    renderProducts();
+  }
+}
+
+// Appelle cette fonction au chargement
+cargarProductos();
 
         // Estado
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
