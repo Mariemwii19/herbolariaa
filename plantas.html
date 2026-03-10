@@ -515,7 +515,7 @@
     <script>
         AOS.init();
 
-// BASE DE DATOS COMPLETA CON FICHAS DETALLADAS
+        // BASE DE DATOS COMPLETA CON FICHAS DETALLADAS
         const productos = [
             { 
                 id: 1, 
@@ -614,6 +614,36 @@
                 icono: ""
             }
         ];
+
+        // Estado
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let filteredProducts = [...productos];
+        let activeCategory = "all";
+        let searchTerm = "";
+
+        // Elementos DOM
+        const productsGrid = document.getElementById('products-grid');
+        const searchInput = document.getElementById('search-input');
+        const chips = document.querySelectorAll('.chip');
+        const resultsCount = document.getElementById('results-count');
+        const modal = document.getElementById('product-modal');
+        const modalContent = document.getElementById('modal-content');
+        const closeModal = document.getElementById('close-modal');
+        const cartSidebar = document.getElementById('cart-sidebar');
+        const cartIcon = document.getElementById('cart-icon');
+        const closeCart = document.getElementById('close-cart');
+        const cartItems = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        const cartCount = document.getElementById('cart-count');
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        // Menú móvil
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
 
         // Filtrar productos
         function filterProducts() {
