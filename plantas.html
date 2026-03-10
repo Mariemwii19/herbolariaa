@@ -515,68 +515,46 @@
     <script>
         AOS.init();
 
-        // Au lieu d'avoir les données en dur, on les charge depuis les fichiers JSON
-let productos = [];
+ // Supprime toute la partie "const productos = [...]"
+// Remplace par ça :
 
+let productos = [];
+let filteredProducts = [];
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// Fonction pour charger les produits depuis les fichiers JSON
 async function cargarProductos() {
-  try {
-    // Liste des fichiers JSON dans _data/plantas/
-    const archivos = [
-      'ashwagandha.json',
-      'manzanilla.json', 
-      'valeriana.json',
-      'jengibre.json',
-      'tila.json',
-      'eucalipto.json'
-      // Ajoute ici tous tes fichiers
-    ];
-    
-    for (const archivo of archivos) {
-      const respuesta = await fetch(`/_data/plantas/${archivo}`);
-      const data = await respuesta.json();
-      productos.push(data);
+    try {
+        const archivos = [
+            'ashwagandha.json',
+            'manzanilla.json',
+            'valeriana.json',
+            'jengibre.json',
+            'tila.json',
+            'eucalipto.json'
+        ];
+        
+        for (const archivo of archivos) {
+            const respuesta = await fetch(`/_data/plantas/${archivo}`);
+            const data = await respuesta.json();
+            productos.push(data);
+        }
+        
+        filteredProducts = [...productos];
+        renderProducts();
+        resultsCount.textContent = `Mostrando ${filteredProducts.length} productos`;
+        
+    } catch (error) {
+        console.error('Erreur chargement:', error);
+        // Données de secours
+        productos = [];
+        filteredProducts = [];
+        renderProducts();
     }
-    
-    // Une fois tous les produits chargés, on filtre et affiche
-    filteredProducts = [...productos];
-    renderProducts();
-    resultsCount.textContent = `Mostrando ${filteredProducts.length} productos`;
-    
-  } catch (error) {
-    console.error('Erreur chargement produits:', error);
-    // Fallback : utilise les données en dur si le chargement échoue
-    productos = [...]; // tes données en dur en backup
-    filteredProducts = [...productos];
-    renderProducts();
-  }
 }
 
-// Appelle cette fonction au chargement
+// Appeler la fonction au chargement
 cargarProductos();
-
-        // Estado
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        let filteredProducts = [...productos];
-        let activeCategory = "all";
-        let searchTerm = "";
-
-        // Elementos DOM
-        const productsGrid = document.getElementById('products-grid');
-        const searchInput = document.getElementById('search-input');
-        const chips = document.querySelectorAll('.chip');
-        const resultsCount = document.getElementById('results-count');
-        const modal = document.getElementById('product-modal');
-        const modalContent = document.getElementById('modal-content');
-        const closeModal = document.getElementById('close-modal');
-        const cartSidebar = document.getElementById('cart-sidebar');
-        const cartIcon = document.getElementById('cart-icon');
-        const closeCart = document.getElementById('close-cart');
-        const cartItems = document.getElementById('cart-items');
-        const cartTotal = document.getElementById('cart-total');
-        const cartCount = document.getElementById('cart-count');
-        const menuToggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
-
         // Menú móvil
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
