@@ -27,9 +27,9 @@ collections:
       - {label: "Image URL", name: "imagen", widget: "string"}
       - {label: "Icono (emoji)", name: "icono", widget: "string"}
 
-  - name: "infusiones"
-    label: "🍵 Infusiones"
-    folder: "_data/infusiones"
+  - name: "Alimentación"
+    label: "🍵 Alimentación"
+    folder: "_data/alimentación"
     create: true
     slug: "{{slug}}"
     fields:
