@@ -914,7 +914,156 @@
             { id: 21, name: "Llantén", botanical: "Plantago major", category: "respiratorio", categoryName: "Respiratorio", description: "Emoliente para mucosas.", fullDescription: "El llantén contiene mucílagos que recubren y protegen las mucosas irritadas.", usos: ["Garganta irritada", "Tos", "Afonía", "Inflamación de mucosas"], preparacion: "Infusión: 1 cucharadita de hojas por taza, 5-7 minutos.", contraindicaciones: "Generalmente segura.", estudios: "Los mucílagos y la aucubina le confieren propiedades antiinflamatorias.", price: 8.25, image: "https://images.unsplash.com/photo-1615485290448-2d8e2f5f6d7a?q=80&w=800&auto=format&fit=crop", icono: "🌱" },
             { id: 22, name: "Gordolobo", botanical: "Verbascum thapsus", category: "respiratorio", categoryName: "Respiratorio", description: "Suaviza la tos seca.", fullDescription: "El gordolobo es tradicionalmente utilizado para problemas respiratorios. Sus flores suavizan la tos seca.", usos: ["Bronquitis", "Tos seca", "Congestión pulmonar", "Afonía"], preparacion: "Infusión: 1 cucharadita de flores por taza, 5-7 minutos. Colar bien.", contraindicaciones: "Las flores tienen pequeños pelitos que pueden irritar la garganta si no se cuelan bien.", estudios: "Las flores contienen mucílagos y saponinas con efectos expectorantes.", price: 9.40, image: "https://images.unsplash.com/photo-1615485290448-2d8e2f5f6d7a?q=80&w=800&auto=format&fit=crop", icono: "🌼" },
             { id: 23, name: "Malva", botanical: "Malva sylvestris", category: "respiratorio", categoryName: "Respiratorio", description: "Antiinflamatorio de mucosas.", fullDescription: "La malva tiene alto contenido en mucílagos, lo que la convierte en un excelente antiinflamatorio para las mucosas.", usos: ["Garganta inflamada", "Tos seca", "Irritación bucal", "Resfriados"], preparacion: "Infusión: 1 cucharada de hojas y flores por taza, 5-7 minutos.", contraindicaciones: "Puede interferir con la absorción de otros medicamentos.", estudios: "Los mucílagos de la malva forman una capa protectora sobre las mucosas.", price: 7.50, image: "https://images.unsplash.com/photo-1615485290448-2d8e2f5f6d7a?q=80&w=800&auto=format&fit=crop", icono: "🌸" }
-        ];
+        ];const productos = [
+    // ... tus 23 productos originales (Ashwagandha, Manzanilla, Valeriana, etc.) ...
+    
+    // NUEVAS PLANTAS MEDICINALES DE LA INDIA
+    
+    { 
+        id: 24, 
+        name: "Neem", 
+        botanical: "Azadirachta indica", 
+        category: "ayurveda", 
+        categoryName: "Ayurveda", 
+        description: "El árbol de la farmacia. Purifica la sangre y cuida la piel.", 
+        fullDescription: "El neem es conocido en la India como 'la farmacia del pueblo' o 'el árbol de la farmacia'. Sus hojas, corteza y semillas tienen potentes propiedades antibacterianas, antifúngicas y purificantes. Es uno de los remedios más versátiles del Ayurveda, utilizado durante miles de años para problemas de piel, salud bucal y desintoxicación del organismo. Nuestro neem proviene de cultivos ecológicos en el sur de India.", 
+        usos: ["Acné", "Problemas de piel", "Purificación sanguínea", "Parásitos intestinales", "Salud bucal"], 
+        preparacion: "Infusión: 1 cucharadita de hojas secas por taza, 5-7 minutos. Para uso externo: hervir hojas y aplicar el agua sobre la piel. Enjuague bucal: hervir hojas y usar como colutorio.", 
+        contraindicaciones: "Evitar durante el embarazo y lactancia. No usar en niños pequeños sin supervisión. Puede reducir la fertilidad en dosis muy altas.", 
+        estudios: "Estudios modernos confirman sus propiedades antimicrobianas, antiinflamatorias y su capacidad para regular el sistema inmunológico. La nimbidina, un compuesto del neem, ha demostrado actividad contra bacterias resistentes.", 
+        price: 14.90, 
+        image: "https://images.unsplash.com/photo-1615485290448-2d8e2f5f6d7a?q=80&w=800&auto=format&fit=crop", 
+        icono: "🌿" 
+    },
+    { 
+        id: 25, 
+        name: "Moringa", 
+        botanical: "Moringa oleifera", 
+        category: "nutricion", 
+        categoryName: "Nutrición", 
+        description: "El árbol milagroso. Alto contenido en vitaminas y minerales.", 
+        fullDescription: "La moringa es considerada un superalimento y es conocida como 'el árbol milagroso'. Sus hojas contienen más vitamina C que las naranjas, más calcio que la leche, más hierro que las espinacas y más potasio que los plátanos. En la India se utiliza tradicionalmente para combatir la desnutrición, fortalecer el sistema inmune y aumentar la energía. Nuestras hojas de moringa provienen de cultivos ecológicos en el sur de India, cosechadas a mano y secadas a baja temperatura.", 
+        usos: ["Falta de energía", "Defensas bajas", "Anemia", "Desnutrición", "Lactancia materna"], 
+        preparacion: "Infusión: 1 cucharadita de hojas en polvo por taza, 3-5 minutos. También se puede añadir a batidos, sopas o ensaladas. Dosis diaria recomendada: 1-2 cucharaditas.", 
+        contraindicaciones: "En dosis altas puede tener efecto laxante. Consultar con un profesional si se toman medicamentos para la tiroides o anticoagulantes. Evitar durante el embarazo en dosis altas.", 
+        estudios: "Numerosos estudios han demostrado su alto valor nutricional y sus propiedades antioxidantes. La moringa contiene más de 90 nutrientes y 46 antioxidantes diferentes.", 
+        price: 18.90, 
+        image: "https://images.unsplash.com/photo-1589754887121-73d3a5d7c2cb?q=80&w=800&auto=format&fit=crop", 
+        icono: "🌱" 
+    },
+    { 
+        id: 26, 
+        name: "Cúrcuma", 
+        botanical: "Curcuma longa", 
+        category: "antiinflamatorio", 
+        categoryName: "Antiinflamatorio", 
+        description: "El oro dorado de la India. Potente antiinflamatorio natural.", 
+        fullDescription: "La cúrcuma es la especia más sagrada y estudiada de la India. Su principio activo, la curcumina, es uno de los antiinflamatorios naturales más potentes conocidos. En Ayurveda se utiliza para todo tipo de inflamaciones, problemas digestivos y como rejuvenecedor celular. Nuestra cúrcuma proviene de cultivos ecológicos en Kerala, la región más famosa por su cúrcuma de alta calidad.", 
+        usos: ["Inflamación articular", "Artritis", "Digestión lenta", "Protección hepática", "Antioxidante"], 
+        preparacion: "Leche dorada: 1 cucharadita de cúrcuma en polvo con leche caliente, pimienta negra y miel. Infusión: hervir la raíz troceada 10-15 minutos. Mejor absorción con pimienta negra y grasas saludables.", 
+        contraindicaciones: "Puede interactuar con anticoagulantes. Evitar en caso de obstrucción de las vías biliares. En dosis muy altas puede causar molestias estomacales.", 
+        estudios: "Miles de estudios avalan sus propiedades antiinflamatorias y antioxidantes. La curcumina ha demostrado ser tan efectiva como algunos antiinflamatorios farmacéuticos sin sus efectos secundarios.", 
+        price: 12.90, 
+        image: "https://images.unsplash.com/photo-1615485290448-2d8e2f5f6d7a?q=80&w=800&auto=format&fit=crop", 
+        icono: "🟡" 
+    },
+    { 
+        id: 27, 
+        name: "Brahmi", 
+        botanical: "Bacopa monnieri", 
+        category: "ayurveda", 
+        categoryName: "Ayurveda", 
+        description: "Potencia la memoria y la concentración. Nootrópico natural.", 
+        fullDescription: "El brahmi es una de las plantas más valoradas en el Ayurveda para la mente. Su nombre significa 'la que da conocimiento'. Mejora la memoria, la concentración, reduce el estrés mental y protege el cerebro del envejecimiento. Tradicionalmente se utiliza para estudiantes, personas mayores y quienes sufren de ansiedad mental. Nuestro brahmi crece de forma silvestre en zonas húmedas de la India y se recolecta de manera sostenible.", 
+        usos: ["Memoria", "Concentración", "Estrés mental", "Ansiedad", "Envejecimiento cerebral", "Estudiantes"], 
+        preparacion: "Infusión: 1 cucharadita de hojas secas por taza, 5-7 minutos. Tintura: 30 gotas, 2 veces al día. Para mejores resultados, tomar durante al menos 4-6 semanas.", 
+        contraindicaciones: "Puede causar molestias digestivas en personas sensibles. Evitar durante el embarazo y lactancia. Puede enlentecer el ritmo cardíaco en personas con bradicardia.", 
+        estudios: "Estudios clínicos han demostrado que el brahmi mejora la memoria verbal, la retención de información y reduce la ansiedad. Se considera un nootrópico con efectos neuroprotectores.", 
+        price: 21.50, 
+        image: "https://images.unsplash.com/photo-1546241072-48010ad2862c?q=80&w=800&auto=format&fit=crop", 
+        icono: "🧠" 
+    },
+    { 
+        id: 28, 
+        name: "Triphala", 
+        botanical: "Triphala (Amalaki, Bibhitaki, Haritaki)", 
+        category: "digestion", 
+        categoryName: "Digestión", 
+        description: "La fórmula ayurvédica por excelencia para la digestión.", 
+        fullDescription: "Triphala es una mezcla de tres frutas: Amalaki (Emblica officinalis), Bibhitaki (Terminalia bellirica) y Haritaki (Terminalia chebula). Es el remedio digestivo más importante del Ayurveda, considerado un rasayana (rejuvenecedor). Regula el tránsito intestinal, desintoxica el colon, mejora la absorción de nutrientes y tiene efectos antioxidantes. Nuestra triphala se prepara con frutas de cultivo ecológico en el norte de India, secadas y molidas siguiendo métodos tradicionales.", 
+        usos: ["Estreñimiento", "Digestión lenta", "Desintoxicación", "Limpieza intestinal", "Salud ocular", "Pérdida de peso"], 
+        preparacion: "Infusión: 1 cucharadita de polvo en agua caliente, dejar reposar 5-10 minutos. Tomar antes de dormir para regular el tránsito matutino. También en cápsulas.", 
+        contraindicaciones: "Evitar en caso de diarrea aguda. No usar durante el embarazo sin supervisión. Puede causar molestias abdominales en dosis altas.", 
+        estudios: "La triphala ha sido ampliamente estudiada por sus propiedades antioxidantes, antiinflamatorias y su capacidad para regular la microbiota intestinal. Se considera uno de los preparados ayurvédicos más efectivos.", 
+        price: 16.90, 
+        image: "https://images.unsplash.com/photo-1589754887121-73d3a5d7c2cb?q=80&w=800&auto=format&fit=crop", 
+        icono: "🍊" 
+    },
+    { 
+        id: 29, 
+        name: "Shatavari", 
+        botanical: "Asparagus racemosus", 
+        category: "femenino", 
+        categoryName: "Salud Femenina", 
+        description: "Tónico femenino y hormonal. Apoya la fertilidad y la lactancia.", 
+        fullDescription: "Shatavari significa 'la que tiene cien esposos' y es el principal tónico femenino del Ayurveda. Es una planta adaptógena con acción específica sobre el sistema reproductor femenino. Regula el ciclo menstrual, apoya la fertilidad, mejora la producción de leche materna, alivia los síntomas de la menopausia y nutre los tejidos reproductivos. Nuestro shatavari proviene de cultivos ecológicos en el norte de India, donde se utiliza tradicionalmente para mujeres en todas las etapas de la vida.", 
+        usos: ["Regulación menstrual", "Fertilidad", "Lactancia materna", "Menopausia", "Deseo sexual", "Vitalidad femenina"], 
+        preparacion: "Infusión: 1 cucharadita de raíz en polvo en leche caliente o agua. Tomar 1-2 veces al día. Tradicionalmente se toma con leche tibia y miel.", 
+        contraindicaciones: "Puede aumentar los niveles de estrógeno. Consultar con un profesional si hay antecedentes de cáncer hormonal. Evitar durante el embarazo sin supervisión.", 
+        estudios: "Investigaciones modernas confirman sus propiedades fitoestrogénicas, su capacidad para mejorar la lactancia y su efecto adaptógeno sobre el sistema hormonal femenino.", 
+        price: 24.90, 
+        image: "https://images.unsplash.com/photo-1546241072-48010ad2862c?q=80&w=800&auto=format&fit=crop", 
+        icono: "🌸" 
+    },
+    { 
+        id: 30, 
+        name: "Guduchi", 
+        botanical: "Tinospora cordifolia", 
+        category: "inmunidad", 
+        categoryName: "Inmunidad", 
+        description: "Refuerza el sistema inmunológico. Conocido como 'amrita' (néctar divino).", 
+        fullDescription: "El guduchi es conocido en el Ayurveda como 'amrita', que significa néctar divino, por sus extraordinarias propiedades rejuvenecedoras. Es un potente inmunomodulador que ayuda al cuerpo a combatir infecciones, fiebres y enfermedades crónicas. Purifica la sangre, reduce la inflamación y apoya la función hepática. Nuestro guduchi proviene de cultivos ecológicos en el centro de India, recolectado en su punto óptimo de madurez.", 
+        usos: ["Defensas bajas", "Fiebre recurrente", "Artritis", "Afecciones crónicas", "Desintoxicación", "Alergias"], 
+        preparacion: "Infusión: 1 cucharadita de tallo en polvo por taza, hervir 10 minutos. Tomar 1-2 veces al día. Tintura: 30-40 gotas, 2-3 veces al día.", 
+        contraindicaciones: "Generalmente segura. Puede reducir el azúcar en sangre, ajustar medicación para diabetes si es necesario. Evitar durante el embarazo sin supervisión.", 
+        estudios: "Estudios han demostrado sus propiedades inmunomoduladoras, hepatoprotectoras y antiinflamatorias. Se utiliza en la medicina ayurvédica para enfermedades autoinmunes y fiebres crónicas.", 
+        price: 19.90, 
+        image: "https://images.unsplash.com/photo-1615484477774-c1f0c7f6e7d1?q=80&w=800&auto=format&fit=crop", 
+        icono: "🛡️" 
+    },
+    { 
+        id: 31, 
+        name: "Amalaki", 
+        botanical: "Emblica officinalis (Amla)", 
+        category: "ayurveda", 
+        categoryName: "Ayurveda", 
+        description: "Rico en vitamina C natural. Potente antioxidante y rejuvenecedor.", 
+        fullDescription: "El amalaki, también conocido como amla, es una de las frutas más ricas en vitamina C natural de la naturaleza. Es el principal ingrediente de la triphala y uno de los rejuvenecedores más importantes del Ayurveda. Fortalece el sistema inmunológico, mejora la digestión, nutre el cabello y la piel, y protege el organismo contra el envejecimiento. Nuestro amalaki proviene de cultivos ecológicos en el norte de India.", 
+        usos: ["Antioxidante", "Sistema inmunológico", "Salud capilar", "Piel radiante", "Digestión", "Vista cansada"], 
+        preparacion: "Infusión: 1 cucharadita de polvo por taza, 5-7 minutos. Tradicionalmente se toma con miel. También en mermelada (chutney) o como suplemento.", 
+        contraindicaciones: "Puede aumentar la acidez estomacal en personas sensibles. Evitar en casos de diarrea aguda.", 
+        estudios: "El amalaki contiene la forma más biodisponible de vitamina C y ha demostrado potentes efectos antioxidantes, antiinflamatorios y hepatoprotectores.", 
+        price: 15.90, 
+        image: "https://images.unsplash.com/photo-1589754887121-73d3a5d7c2cb?q=80&w=800&auto=format&fit=crop", 
+        icono: "🍈" 
+    },
+    { 
+        id: 32, 
+        name: "Haritaki", 
+        botanical: "Terminalia chebula", 
+        category: "digestion", 
+        categoryName: "Digestión", 
+        description: "La reina de las hierbas ayurvédicas. Rejuvenecedor digestivo.", 
+        fullDescription: "El haritaki es conocido como 'la reina de las hierbas' en el Ayurveda. Es uno de los tres ingredientes de la triphala y se considera un rasayana (rejuvenecedor) por excelencia. Regula el tránsito intestinal, desintoxica el colon, mejora la digestión y tiene efectos antibacterianos. Nuestro haritaki proviene de cultivos ecológicos en el Himalaya, donde crece de forma silvestre.", 
+        usos: ["Estreñimiento", "Digestión lenta", "Desintoxicación", "Limpieza intestinal", "Salud respiratoria", "Antiparasitario"], 
+        preparacion: "Infusión: 1 cucharadita de polvo por taza, 5-10 minutos. Tomar antes de dormir. Para uso externo: en enjuagues bucales.", 
+        contraindicaciones: "Evitar durante el embarazo. Puede causar deshidratación en dosis altas. No usar en casos de diarrea aguda.", 
+        estudios: "Estudios modernos confirman sus propiedades laxantes suaves, antioxidantes, antibacterianas y su capacidad para proteger la mucosa intestinal.", 
+        price: 14.90, 
+        image: "https://images.unsplash.com/photo-1589754887121-73d3a5d7c2cb?q=80&w=800&auto=format&fit=crop", 
+        icono: "🍂" 
+    }
+];
 
         // État
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
