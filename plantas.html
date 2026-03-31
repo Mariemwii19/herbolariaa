@@ -1085,4 +1085,19 @@
         chips.forEach(chip => chip.addEventListener('click', () => { chips.forEach(c => c.classList.remove('active')); chip.classList.add('active'); activeCategory = chip.dataset.category; filterProducts(); }));
         applyBtn.addEventListener('click', () => { minPrice = parseFloat(minInput.value) || 0; maxPrice = parseFloat(maxInput.value) || 50; filterProducts(); });
         closeModal.addEventListener('click', () => { modal.style.display = 'none'; document.body.style.overflow = 'auto'; });
-        modal.addEventListener('click', (e) =>
+        modal.addEventListener('click', (e) => { if (e.target === modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; } });
+        cartIcon.addEventListener('click', () => cartSidebar.classList.add('open'));
+        closeCart.addEventListener('click', () => cartSidebar.classList.remove('open'));
+        document.getElementById('checkout-btn').addEventListener('click', () => {
+            if (cart.length === 0) { showToast('El carrito está vacío'); return; }
+            showToast('Redirigiendo al pago...');
+            setTimeout(() => { cart = []; localStorage.setItem('cart', JSON.stringify(cart)); updateCart(); cartSidebar.classList.remove('open'); showToast('¡Gracias por tu compra!'); }, 1500);
+        });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { cartSidebar.classList.remove('open'); if (modal.style.display === 'flex') { modal.style.display = 'none'; document.body.style.overflow = 'auto'; } } });
+
+        filterProducts();
+        updateCart();
+    </script>
+</body>
+</html>
+
